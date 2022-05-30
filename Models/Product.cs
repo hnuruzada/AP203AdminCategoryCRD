@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _23052022.Models
 {
@@ -12,5 +13,6 @@ namespace _23052022.Models
         public bool IsInStock { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public List<ProductColor> ProductColors  { get; set; }
     }
 }

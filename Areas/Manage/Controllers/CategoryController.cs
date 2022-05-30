@@ -46,6 +46,21 @@ namespace _23052022.Areas.Manage.Controllers
 
             return RedirectToAction("Index");
         }
+        public IActionResult Edit(int id)
+        {
+            Category category = _context.Categories.FirstOrDefault(c=>c.Id==id);
+            return View(category);
+        }
+        public IActionResult Edit(Category category,int id)
+        {
+            if(category==null) return NotFound();
+            if(!ModelState.IsValid) return BadRequest();
+            Category existCategory = _context.Categories.FirstOrDefault();
+
+
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
         
         public IActionResult Delete(int id)
         {
