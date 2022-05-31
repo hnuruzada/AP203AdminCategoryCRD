@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace _23052022.Models
+namespace Ap103PartialView.Models
 {
     public class Blog
     {
@@ -10,6 +10,6 @@ namespace _23052022.Models
         public string Description { get; set; }
         public string Image { get; set; }
         [NotMapped]
-        public IFormFile ImageFile{ get; set; }
+        public IFormFile ImageFile { get; set; }
     }
 }

@@ -1,11 +1,15 @@
-﻿using _23052022.DAL;
-using _23052022.Models;
-using _23052022.ViewModels;
+﻿using Ap103PartialView.DAL;
+using Ap103PartialView.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 
-namespace _23052022.Controllers
+namespace Ap103PartialView.Controllers
 {
     public class HomeController : Controller
     {
@@ -14,22 +18,12 @@ namespace _23052022.Controllers
         {
             _context = context;
         }
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            List<Slider> sliders = _context.Sliders.ToList();
-            Dictionary<string, string> settings = _context.Settings.ToDictionary(x => x.Key, x => x.Value);
-            List<Product> products = _context.Products.Where(p => !p.IsDeleted)
-                .OrderByDescending(p => p.Id).ToList();
-
-            HomeViewModel homeVM = new HomeViewModel
-            {
-                Sliders = sliders,
-                Settings = settings,
-                Products = products
-            };
-
-            return View(homeVM);
+            List<Product> products=await _context.Products.ToListAsync();
+            return View(products);
         }
+
+        
     }
 }

@@ -8480,11 +8480,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Hesen\\Desktop\\23052022\\23052022.csproj",
-      "projectName": "23052022",
-      "projectPath": "C:\\Users\\Hesen\\Desktop\\23052022\\23052022.csproj",
+      "projectUniqueName": "C:\\Users\\Hesen\\Desktop\\AP103TagController-master\\Ap103PartialView.csproj",
+      "projectName": "Ap103PartialView",
+      "projectPath": "C:\\Users\\Hesen\\Desktop\\AP103TagController-master\\Ap103PartialView.csproj",
       "packagesPath": "C:\\Users\\Hesen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Hesen\\Desktop\\23052022\\obj\\",
+      "outputPath": "C:\\Users\\Hesen\\Desktop\\AP103TagController-master\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Hesen\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace _23052022.Areas.Manage.Controllers
+namespace Ap103PartialView.Areas.Manage.Controllers
 {
     [Area("Manage")]
     public class DashboardController : Controller
